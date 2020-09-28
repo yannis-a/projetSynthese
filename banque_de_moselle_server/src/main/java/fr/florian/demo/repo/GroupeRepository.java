@@ -1,0 +1,9 @@
+package fr.florian.demo.repo;
+
+import fr.florian.demo.modele.Groupe;
+import org.springframework.data.ldap.repository.LdapRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface GroupeRepository extends LdapRepository<Groupe> {
+}

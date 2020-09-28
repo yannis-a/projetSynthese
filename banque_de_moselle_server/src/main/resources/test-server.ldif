@@ -1,0 +1,141 @@
+dn: dc=banquemoselle,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: banquemoselle
+
+dn: ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=subgroups,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: subgroups
+
+dn: ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+
+dn: uid=ben,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ben Alex
+sn: Alex
+givenName: Ben
+uid: ben
+userPassword: benspassword
+
+dn: uid=bob,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bob Hamilton
+sn: Hamilton
+givenName: Bob
+uid: bob
+userPassword: bobspassword
+
+dn: uid=joe,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Joe Smeth
+sn: Smeth
+givenName: Joe
+uid: joe
+userPassword: joespassword
+
+dn: uid=jerry,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jerry Mouse
+sn: Mouse
+givenName: Jerry
+uid: jerry
+userPassword: jerryspassword
+
+dn: uid=guy,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Guy Slash
+sn: Slash
+givenName: Guy
+uid: guy
+userPassword: guyspassword
+
+dn: uid=jean-paul,ou=people,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jean-Paul Cadet
+sn: Cadet
+givenName: Jean-Paul
+uid: jean-paul
+userPassword: jeanpaulspassword
+
+
+
+dn: cn=redacteurs,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: redacteurs
+ou: redacteur
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=bob,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=joe,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=jerry,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=guy,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=jean-paul,ou=people,dc=banquemoselle,dc=org
+
+dn: cn=receptionneurs,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: receptionneurs
+ou: receptionneur
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=bob,ou=people,dc=banquemoselle,dc=org
+
+dn: cn=gestionnaires,ou=subgroups,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: gestionnaires
+ou: gestionnaire
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=jerry,ou=people,dc=banquemoselle,dc=org
+
+dn: cn=signataires,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: signataires
+ou: signataire
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+
+dn: cn=admins,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admins
+ou: admin
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+
+dn: cn=viseurs,ou=groups,dc=banquemoselle,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: viseurs
+ou: viseur
+uniqueMember: uid=ben,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=bob,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=joe,ou=people,dc=banquemoselle,dc=org
+uniqueMember: uid=jerry,ou=people,dc=banquemoselle,dc=org
